@@ -5,6 +5,13 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 
+/**
+ * Tipo Java
+ */
+//interface Callback {
+//    fun onNameChange(): String
+//}
+
 //Code snippet 2.4: ViewModel definition
 class LogInLogicViewModel : ViewModel() {
 

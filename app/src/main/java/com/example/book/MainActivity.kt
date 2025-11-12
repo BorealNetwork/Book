@@ -8,7 +8,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
+import com.example.book.ui.login.events.LoginScreenEvents
+import com.example.book.ui.login.logic_viewmodel.LoginScreenVM
 import com.example.book.ui.login.simple.LoginScreenSimple
+import com.example.book.ui.login.states.LoginScreenStates
 import com.example.book.ui.theme.BookTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,16 +23,16 @@ class MainActivity : ComponentActivity() {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
 
                     /**** ViewModel como source of truth ****/
-                    LoginScreenSimple(modifier = Modifier.padding(innerPadding))
+//                    LoginScreenSimple(modifier = Modifier.padding(innerPadding))
 
                     /**** ViewModel como source of truth ****/
 //                    LoginScreenVM(modifier = Modifier.padding(innerPadding))
 
-                    /**** Agrupando los states ****/
+                    /**** Agregando los states ****/
 //                    LoginScreenStates(modifier = Modifier.padding(innerPadding))
 
                     /**** Agrupando los states ****/
-//                    LoginScreenEvents(modifier = Modifier.padding(innerPadding))
+                    LoginScreenEvents(modifier = Modifier.padding(innerPadding))
                 }
             }
         }

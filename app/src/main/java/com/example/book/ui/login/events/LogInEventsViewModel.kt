@@ -3,10 +3,12 @@ package com.example.book.ui.login.events
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.lifecycle.ViewModel
 import com.example.book.domain.LogInUiStateAndEvents
 import com.example.book.domain.LogInUiEvent
 
-class LogInEventsViewModel {
+class LogInEventsViewModel : ViewModel(){
+
     /**** Agrupando los events ****/
     // UI's states
     var logInUiState by mutableStateOf(LogInUiStateAndEvents())
@@ -24,14 +26,9 @@ class LogInEventsViewModel {
             }
 
             LogInUiEvent.LogInClicked -> {
-                println("Sending form with parameters:${logInUiState.name} and ${logInUiState.password}")
+                println("Sending form with parameters: ${logInUiState.name} and ${logInUiState.password}")
             }
         }
     }
 
-    companion object {
-        fun applyLogicToValidateInputs(name: String, phone: String): Boolean {
-            return name.length > 1 && phone.length > 3
-        }
-    }
 }

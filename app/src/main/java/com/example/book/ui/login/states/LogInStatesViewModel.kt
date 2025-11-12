@@ -11,13 +11,19 @@ class LogInStatesViewModel : ViewModel() {
 
     /**** Agrupando los states ****/
     // UI's states
-    var  logInUiState by mutableStateOf(LogInUiState())
+    var logInUiState by mutableStateOf(LogInUiState())
         private set
 
     //UI's Events
-    fun onNameChange(): (String) -> Unit = { logInUiState = logInUiState.copy(name = it) }
+    fun onNameChange(): (String) -> Unit = { newName ->
+        logInUiState = logInUiState.copy(name = newName)
+    }
 
-    fun onPasswordChange(): (String) -> Unit = { logInUiState = logInUiState.copy(password = it) }
+    fun onPasswordChange(): (String) -> Unit = { newPassword ->
+        logInUiState = logInUiState.copy(password = newPassword)
+    }
 
-    fun logIn(): () -> Unit = { println("Log In generated for ${logInUiState.name}  and password ${logInUiState.password}") }
+    fun logIn(): () -> Unit =
+        { println("Log In generated for ${logInUiState.name} " +
+                " and password ${logInUiState.password}") }
 }

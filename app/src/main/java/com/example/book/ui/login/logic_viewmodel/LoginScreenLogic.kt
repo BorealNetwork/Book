@@ -16,7 +16,10 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 /**** ViewModel como source of truth ****/
 //Code snippet 2.6
 @Composable
-fun LoginScreenVM(logInviewModel: LogInLogicViewModel = viewModel(), modifier: Modifier) {
+fun LoginScreenVM(
+    logInviewModel: LogInLogicViewModel = viewModel(),
+    modifier: Modifier
+) {
 
     ContactInformation(
         modifier = modifier,
@@ -24,8 +27,8 @@ fun LoginScreenVM(logInviewModel: LogInLogicViewModel = viewModel(), modifier: M
         onNameChange = logInviewModel.onNameChange(),
         password = logInviewModel.password,
         onPasswordChange = logInviewModel.onPasswordChange(),
-        isValidLogIn = logInviewModel.isLoginValid(),
-        logIn = logInviewModel.logIn()
+        logIn = logInviewModel.logIn(),
+        isValidLogIn = logInviewModel.isLoginValid()
     )
 }
 
