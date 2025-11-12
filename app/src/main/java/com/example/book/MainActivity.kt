@@ -22,14 +22,6 @@ class MainActivity : ComponentActivity() {
                     /**** ViewModel como source of truth ****/
                     LoginScreenSimple(modifier = Modifier.padding(innerPadding))
 
-                    /**** ViewModel como source of truth ****/
-//                    LoginScreenVM(modifier = Modifier.padding(innerPadding))
-
-                    /**** Agrupando los states ****/
-//                    LoginScreenStates(modifier = Modifier.padding(innerPadding))
-
-                    /**** Agrupando los states ****/
-//                    LoginScreenEvents(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
