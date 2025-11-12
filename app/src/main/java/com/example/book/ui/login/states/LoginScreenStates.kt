@@ -12,7 +12,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.book.LogInViewModel
 import com.example.book.domain.successValidated
 
 /**** Agrupando los states ****/

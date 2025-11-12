@@ -1,6 +1,5 @@
 package com.example.book.domain
 
-import com.example.book.LogInViewModel
 
 //Code snippet 2.8
 data class LogInUiState(
